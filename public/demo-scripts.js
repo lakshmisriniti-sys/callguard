@@ -2,8 +2,8 @@
 // "Caller" lines are read aloud in one voice; "You" lines in another.
 
 export const SCAM_CALL = [
-  { speaker: "Caller", text: "Hello, am I speaking with Mrs Margaret Hughes? This is Daniel calling from the fraud department at your bank." },
-  { speaker: "You", text: "Oh. Yes, this is Margaret." },
+  { speaker: "Caller", text: "Hello, am I speaking with Mr Raj Patel? This is James calling from the fraud department at your bank." },
+  { speaker: "You", text: "Oh. Yes, this is Raj." },
   { speaker: "Caller", text: "We've detected suspicious transactions on your account this morning, a payment of eight hundred pounds to an online electronics store." },
   { speaker: "You", text: "I didn't buy anything like that." },
   { speaker: "Caller", text: "Don't worry, that's why I'm calling. To stop it I need to verify you. We've just sent a six digit code to your phone. Can you read me the code?" },
@@ -13,7 +13,7 @@ export const SCAM_CALL = [
 ];
 
 export const GENUINE_CALL = [
-  { speaker: "Caller", text: "Hi, is that Margaret Hughes? It's Sophie from Riverside Surgery." },
+  { speaker: "Caller", text: "Hi, is that Mr Raj Patel? It's Sophie from Riverside Surgery." },
   { speaker: "You", text: "Yes, speaking." },
   { speaker: "Caller", text: "I'm just calling to remind you about your flu jab appointment on Thursday at half past ten." },
   { speaker: "You", text: "Lovely, thank you. Do I need to bring anything?" },

@@ -151,8 +151,8 @@ function speak(text, { role = "guard" } = {}) {
     const u = new SpeechSynthesisUtterance(text);
     const v = pickVoice(role);
     if (v) u.voice = v;
-    u.rate = role === "guard" ? 0.95 : 1.02;
-    u.pitch = role === "you" ? 1.15 : role === "caller" ? 0.9 : 1;
+    u.rate = role === "guard" ? 0.95 : role === "you" ? 0.92 : 1.05;
+    u.pitch = role === "you" ? 0.8 : role === "caller" ? 1.05 : 1; // Mr Patel (you) older and lower, caller brisker
     u.volume = role === "guard" ? 1 : 0.9;
     state.speaking = true;
     pauseMic();
@@ -168,7 +168,7 @@ function speak(text, { role = "guard" } = {}) {
 function alertFamily(a) {
   if (state.familyAlerted) return;
   state.familyAlerted = true;
-  $("familyMsg").textContent = `CallGuard: Mum is on a call that looks like a scam. ${a.family_summary} You may want to ring her now.`;
+  $("familyMsg").textContent = `CallGuard: Dad is on a call that looks like a scam. ${a.family_summary} You may want to ring him now.`;
   $("familyToast").hidden = false;
   setTimeout(() => { $("familyToast").hidden = true; }, 9000);
 }

@@ -41,6 +41,6 @@ There are two built-in demo calls. A bank-impersonation scam escalates to *Likel
 1. **Run on the phone itself**: an Android in-call service or iOS Live Activity, whispering through the earpiece only, so the caller can't hear.
 2. **Speaker separation** (diarisation), so only the caller is judged and the user's own words are ignored.
 3. **Synthetic-voice detection** on the caller's audio, so it can say "this voice may be AI-generated", plus number reputation from a Hiya-style caller-ID database.
-4. **Real family alerts** via SMS or push, with a one-tap "call Mum now" button.
+4. **Real family alerts** via SMS or push, with a one-tap "call Dad now" button.
 5. **An evaluation set** of real (anonymised) scam and genuine call transcripts, to measure precision and recall and to tune the thresholds and prompt.
 6. **Multilingual support**, since many scams target non-native speakers.
