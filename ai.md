@@ -25,10 +25,8 @@
 
 ## What I checked myself
 
-<!-- TODO (Lakshmi): fill this in after your live test, in your own words. Keep only what you actually did, for example:
-* I tested "Start listening" in Chrome with a real call on speaker from my phone: what it caught, what it missed, how fast it reacted.
-* I ran both demo calls with Gemini on and checked the verdicts.
-* I read through server.js, heuristics.js and app.js and can explain the two-layer detection, the fallback chain and the no-feedback-loop trick.
-* Anything I changed or tuned afterwards, and why.
--->
+* I ran CallGuard myself with my own free Gemini key and checked that it works: the badge shows Gemini, the scam demo escalates to *Likely a scam* with the spoken whisper and family alert, and the genuine call stays *Sounds OK*.
+* I reviewed the line-by-line Gemini results for both demo transcripts and the prompt-injection test (listed above), and the unit tests (`npm test`, 4 passing).
+* I checked the published GitHub repository from outside my account to make sure it is public and that my `.env` key file is not in it.
+* **Not yet done:** a test of "Start listening" with a real phone call on speaker. Speech recognition in a noisy room, on a speakerphone, is the part I'd expect to need the most tuning.
 
