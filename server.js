@@ -10,10 +10,12 @@ import { z } from "zod";
 import { betaZodOutputFormat } from "@anthropic-ai/sdk/helpers/beta/zod";
 import { scoreTranscript, TACTICS } from "./public/heuristics.js";
 
-try { process.loadEnvFile(); } catch { /* no .env file: fine */ }
+const APP_DIR = fileURLToPath(new URL(".", import.meta.url));
+// Load .env from next to server.js, so it works whichever folder the server is started from.
+try { process.loadEnvFile(join(APP_DIR, ".env")); } catch { /* no .env file: fine */ }
 
 const PORT = Number(process.env.PORT || 3000);
-const PUBLIC_DIR = join(fileURLToPath(new URL(".", import.meta.url)), "public");
+const PUBLIC_DIR = join(APP_DIR, "public");
 const GEMINI_KEY = process.env.GEMINI_API_KEY;
 const hasClaude = Boolean(process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN);
 const PROVIDER = GEMINI_KEY ? "gemini" : hasClaude ? "claude" : null;
