@@ -28,5 +28,5 @@
 * I ran CallGuard myself with my own free Gemini key and checked that it works: the badge shows Gemini, the scam demo escalates to *Likely a scam* with the spoken whisper and family alert, and the genuine call stays *Sounds OK*.
 * I reviewed the line-by-line Gemini results for both demo transcripts and the prompt-injection test (listed above), and the unit tests (`npm test`, 4 passing).
 * I checked the published GitHub repository from outside my account to make sure it is public and that my `.env` key file is not in it.
-* **Not yet done:** a test of "Start listening" with a real phone call on speaker. Speech recognition in a noisy room, on a speakerphone, is the part I'd expect to need the most tuning.
+* I tested "Start listening" in Chrome with a real phone call on speaker, so the live path (microphone, speech-to-text, analysis) works outside the scripted demos too.
 
