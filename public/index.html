@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CallGuard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3z"/></svg>
+      <span>CallGuard</span>
+    </div>
+    <span id="engine" class="pill">Checking…</span>
+  </header>
+
+  <main>
+    <section class="status" aria-live="polite">
+      <div id="meter" class="meter" data-verdict="idle">
+        <div class="meter-fill" id="meterFill"></div>
+        <div class="meter-text">
+          <span id="verdict">Not listening</span>
+          <span id="riskNum" class="risk-num"></span>
+        </div>
+      </div>
+      <p id="whisper" class="whisper">Put your call on speaker, then press <strong>Start listening</strong>.</p>
+    </section>
+
+    <section id="sayCard" class="say" hidden>
+      <h2>You can say</h2>
+      <p id="sayThis"></p>
+    </section>
+
+    <section class="tactics" aria-label="Warning signs">
+      <ul id="tactics"></ul>
+      <p id="evidence" class="evidence"></p>
+    </section>
+
+    <section class="controls">
+      <button id="listenBtn" class="primary">Start listening</button>
+      <button id="demoScam">Demo: scam call</button>
+      <button id="demoSafe">Demo: genuine call</button>
+      <button id="familyBtn" class="family" disabled>Alert my family</button>
+    </section>
+
+    <section class="settings">
+      <label><input type="checkbox" id="spokenAlerts" checked /> Whisper alerts out loud</label>
+      <label><input type="checkbox" id="autoFamily" checked /> Alert family automatically if it is very likely a scam</label>
+    </section>
+
+    <section class="transcript">
+      <h2>Live transcript <span id="srcTag" class="src"></span></h2>
+      <ol id="lines"></ol>
+      <p id="interim" class="interim"></p>
+    </section>
+
+    <div id="familyToast" class="toast" role="status" hidden>
+      <strong>Message sent to Priya (daughter)</strong>
+      <p id="familyMsg"></p>
+      <small>Prototype: the message is shown here, not really sent.</small>
+    </div>
+  </main>
+
+  <footer>CallGuard doesn't record or store your calls. Prototype: speech recognition and the AI check use Google's online services.</footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
